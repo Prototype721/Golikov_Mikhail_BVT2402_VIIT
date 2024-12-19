@@ -1,5 +1,3 @@
-import os
-
 def read_file(file_path, type_of_read = 0):
     try:
         with open(file_path, 'r', encoding = 'utf-8') as file:
@@ -21,13 +19,13 @@ def read_file(file_path, type_of_read = 0):
 
 
 def write_file(file_path, type_of_write = 0):
-    try:
-        if type_of_write == 0:
-            os.remove(file_path) # удаляем все данные в файле
-    except:
-        pass
 
-    with open(file_path, 'a', encoding = 'utf-8') as file:
+    if type_of_write == 0:
+        enter_key = 'w' # перезапись файла с предшествующей отчисткой или создание нового файла если тот не существовал
+    else:
+        enter_key = 'a' # дозапись файла или создание нового файла если тот не существовал
+
+    with open(file_path, enter_key, encoding = 'utf-8') as file:
 
         data = input("Введите данные: ") + '\n'
         file.write(data)
@@ -43,5 +41,7 @@ if __name__ == '__main__':
     print('\n=========================================')
 
     write_file('user_input.txt', 0) # запись текста в новый файл
+    read_file('user_input.txt', 0) # чтение всего файла сразу 
     print('----------------------------')
     write_file('user_input.txt', 1) # дозапись текста в имеюзщийся файл
+    read_file('user_input.txt', 0) # чтение всего файла сразу 

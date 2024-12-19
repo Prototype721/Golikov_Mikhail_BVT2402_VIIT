@@ -29,6 +29,7 @@ print(f'qwerty for check - {check}')
 print('-'*40)
 
 new_psw = input('Set new password: ')
+Root.set_password(new_psw)
 print(f'New password set to {new_psw}')
 
 print('-'*40)
