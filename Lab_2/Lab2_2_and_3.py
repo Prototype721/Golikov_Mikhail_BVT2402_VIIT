@@ -1,12 +1,7 @@
-# Задание 1
-def greet(name): print(f'Здравствуй, {name}!')
-
-def square(number): return number**2
-
-def max_of_two(x, y): return max(x, y)
-
 # Задание 2
 def describe_person(name, age=30): print(f'Имя - {name} \nВозраст - {age}')
+
+# Задание 3
 
 import math
 def is_prime(number):
