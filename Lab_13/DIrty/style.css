@@ -1,0 +1,22 @@
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;  
+    gap: 30px;
+}
+body {
+    background: #333;
+    color: aqua;
+    font-family: 'Roboto', sans-serif;
+}
+footer {
+    background: wheat;
+    color: white;
+    flex: 1 200px;
+}
+a:hover {
+    background-color: #02f816;
+}
+ul:hover {
+    background-color: #e5ff00;
+}
