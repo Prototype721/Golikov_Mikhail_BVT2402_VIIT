@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Википедиа</title>
+</head>
+<body>
+    <header class="header">
+        <h1> Википедия имени Михаила Голикова &lt;"Девятого"&gt; </h1>
+    </header>
+        <div class="wrapper">
+        <main class="content">
+            <h3> Найдётся всё </h3>
+            <form class="send-form">
+                <input type="text" placeholder="Котики" name="message" required>
+                <button type="submit">Отправить</button>
+            </form>
+            <h3>Результаты поиска</h3>
+            <div class="results">
+                <ul>
+                    {% for item in content %}
+                      <li>
+                        <a class="result_link" href="http://localhost:8000/find/{{ item }}">{{ item }}</a>
+                    </li>
+                    {% endfor %}
+                  </ul>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>Все права не защищены. Умом!</p> 
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+
